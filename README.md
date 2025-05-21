@@ -101,9 +101,68 @@ The textfile feature.txt has been merged
 ```bash
 # Paste here the push & clone commands and outputs
 ```
-
 ---
+```bash
 
+user89@vorlesung:~$ mkdir -p ~/repos/myproject.git && cd ~/repos/myproject.git && git init --bare
+lex-alex@DESKTOP-6IB5N3D:~$ cd ~/GitPP5
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ cd
+lex-alex@DESKTOP-6IB5N3D:~$ ssh user89@128.140.85.215
+user89@vorlesung:~$ ls
+feature-1  repos
+user89@vorlesung:~$ tree -d
+.
+├── feature-1
+└── repos
+    └── myproject.git
+        ├── branches
+        ├── hooks
+        ├── info
+        ├── objects
+        │   ├── info
+        │   └── pack
+        └── refs
+            ├── heads
+            └── tags
+
+13 directories
+user89@vorlesung:~$ exit
+logout
+Connection to 128.140.85.215 closed.
+lex-alex@DESKTOP-6IB5N3D:~$ cd ~/GitPP5
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git remote add origin-ssh user89@128.140.85.215:~/repos/myproject.git
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git branch
+  feature-1
+* master
+lex-alex@DESKTOP-6IB5N3D:~$ cd ~/GitPP5
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git remote add origin-ssh user89@128.140.85.215:~/repos/myproject.git
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git branch
+  feature-1
+* master
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push origin-ssh master
+user89@128.140.85.215's password:
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 266 bytes | 266.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To 128.140.85.215:~/repos/myproject.git
+ * [new branch]      master -> master
+lex-alex@DESKTOP-6IB5N3D:~$ cd ~/GitPP5
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ mkdir git-clone
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ cd git-clone
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git remote add origin-ssh user89@128.140.85.215:~/repos/myproject.git
+error: remote origin-ssh already exists.
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push origin-ssh master
+user89@128.140.85.215's password:
+Everything up-to-date
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git clone user89@128.140.85.215:~/repos/myproject.git
+Cloning into 'myproject'...
+user89@128.140.85.215's password:
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+```
 ### Task 3: GitHub & THGA GitLab
 
 1. On [GitHub](github.com), create a new empty repo under your account named `myproject-gh`.
