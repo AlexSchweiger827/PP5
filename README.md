@@ -47,7 +47,6 @@ In this exercise you will:
 # and the relevant terminal output (e.g., branch listing, merge messages)
 ```
 lex-alex@DESKTOP-6IB5N3D:~$ sudo apt install git
-
 lex-alex@DESKTOP-6IB5N3D:~$ git config --global user.name "Alexander Schweiger"
 lex-alex@DESKTOP-6IB5N3D:~$ git config --global user.email "Alexander.schweiger@stud.thga.de"
 lex-alex@DESKTOP-6IB5N3D:~$ mkdir ~/GitPP5
