@@ -46,6 +46,8 @@ In this exercise you will:
 # Paste here the sequence of git commands you ran
 # and the relevant terminal output (e.g., branch listing, merge messages)
 ```
+
+```bash
 lex-alex@DESKTOP-6IB5N3D:~$ sudo apt install git
 lex-alex@DESKTOP-6IB5N3D:~$ git config --global user.name "Alexander Schweiger"
 lex-alex@DESKTOP-6IB5N3D:~$ git config --global user.email "Alexander.schweiger@stud.thga.de"
@@ -77,7 +79,7 @@ Author: Alexander Schweiger <Alexander.schweiger@stud.thga.de>
 Date:   Wed May 21 22:03:48 2025 +0200
 
 The textfile feature.txt has been merged
-
+```
 
 ### Task 2: Bare Repository on an SSH Server
 
