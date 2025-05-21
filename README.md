@@ -46,8 +46,39 @@ In this exercise you will:
 # Paste here the sequence of git commands you ran
 # and the relevant terminal output (e.g., branch listing, merge messages)
 ```
+lex-alex@DESKTOP-6IB5N3D:~$ sudo apt install git
 
----
+lex-alex@DESKTOP-6IB5N3D:~$ git config --global user.name "Alexander Schweiger"
+lex-alex@DESKTOP-6IB5N3D:~$ git config --global user.email "Alexander.schweiger@stud.thga.de"
+lex-alex@DESKTOP-6IB5N3D:~$ mkdir ~/GitPP5
+lex-alex@DESKTOP-6IB5N3D:~$ cd ~/GitPP5
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git init
+Initialized empty Git repository in /home/lex-alex/GitPP5/.git/
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git checkout -b feature-1
+Switched to a new branch 'feature-1'
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ echo "This is my description" >feature.txt
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git add feature.txt
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git commit -m "The textfile feature.txt has been merged"
+[feature-1 (root-commit) 2dcab0d] The textfile feature.txt has been merged
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git checkout -t -b master
+branch 'master' set up to track 'feature-1'.
+Switched to a new branch 'master'
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git checkout feature-1
+Switched to branch 'feature-1'
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'feature-1'.
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git log
+commit 2dcab0dd78082f34eacd777fdf73d8b680d7d395 (HEAD -> master, feature-1)
+Author: Alexander Schweiger <Alexander.schweiger@stud.thga.de>
+Date:   Wed May 21 22:03:48 2025 +0200
+
+The textfile feature.txt has been merged
+
 
 ### Task 2: Bare Repository on an SSH Server
 
