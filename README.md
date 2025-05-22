@@ -180,7 +180,95 @@ Receiving objects: 100% (3/3), done.
 **Your Commands & Output**
 
 ```bash
-# Paste here the remote‐adding & push outputs
+lex-alex@DESKTOP-6IB5N3D:~$ cd GitPP5
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git remote add github https://github.com/AlexSchweiger827/myproject-gh.git
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push master https://github.com/AlexSchweiger827/myproject-gh.git
+fatal: invalid refspec 'https://github.com/AlexSchweiger827/myproject-gh.git'
+
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push master github
+error: src refspec github does not match any
+error: failed to push some refs to 'master'
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push -u master github
+error: src refspec github does not match any
+error: failed to push some refs to 'master'
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git branch -M main
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git branch
+  feature-1
+* main
+  master
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'feature-1'.
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git branch
+  feature-1
+  main
+* master
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push -u github master
+Username for 'https://github.com': AlexSchweiger827
+Password for 'https://AlexSchweiger827@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/AlexSchweiger827/myproject-gh.git/'
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push -u github master
+Username for 'https://github.com': https://github.com/AlexSchweiger827/myproject-gh.git
+Password for 'https://https%3A%2F%2Fgithub.com%2FAlexSchweiger827%2Fmyproject-gh.git@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/AlexSchweiger827/myproject-gh.git/'
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push -u https://github.com/AlexSchweiger827/myproject-gh.git master
+Username for 'https://github.com': AlexSchweiger827
+Password for 'https://AlexSchweiger827@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/AlexSchweiger827/myproject-gh.git/'
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git remote add github  git@github.com:AlexSchweiger827/myproject-gh.git
+error: remote github already exists.
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push -u git@github.com:AlexSchweiger827/myproject-gh.git master
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ cd
+lex-alex@DESKTOP-6IB5N3D:~$ ssh-keygen -t ed25519 -C "Alexander.schweiger@stud.thga.de"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/lex-alex/.ssh/id_ed25519):
+/home/lex-alex/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/lex-alex/.ssh/id_ed25519
+Your public key has been saved in /home/lex-alex/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:aLPnmKoLbOaj2kWMxfczKohIWfUkZ1KMPMGimvC43Uo Alexander.schweiger@stud.thga.de
+The key's randomart image is:
++--[ED25519 256]--+
+|    o===         |
+|   o.=B.         |
+|  ..+ o.         |
+|..o+ . o         |
+|o*. o + S        |
+|B..o . + o       |
+|+*E.o o .        |
+|==.... =         |
+|=.*+..o .        |
++----[SHA256]-----+
+lex-alex@DESKTOP-6IB5N3D:~$ cd /home/lex-alex/.ssh/id_ed25519.pub
+-bash: cd: /home/lex-alex/.ssh/id_ed25519.pub: Not a directory
+lex-alex@DESKTOP-6IB5N3D:~$ /home/lex-alex/.ssh/id_ed25519.pub
+-bash: /home/lex-alex/.ssh/id_ed25519.pub: Permission denied
+lex-alex@DESKTOP-6IB5N3D:~$ ssh -T git@github.com
+Enter passphrase for key '/home/lex-alex/.ssh/id_ed25519':
+Hi AlexSchweiger827! You've successfully authenticated, but GitHub does not provide shell access.
+lex-alex@DESKTOP-6IB5N3D:~$ cd GitPP5
+lex-alex@DESKTOP-6IB5N3D:~/GitPP5$ git push -u github master
+Username for 'https://github.com': AlexSchweiger827
+Password for 'https://AlexSchweiger827@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/AlexSchweiger827/myproject-gh.git/'
 ```
 
 ---
