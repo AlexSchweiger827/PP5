@@ -289,4 +289,4 @@ fatal: Authentication failed for 'https://github.com/AlexSchweiger827/myproject-
 
 **Remember:** Stop working after **90 minutes** and record where you stopped!
 
-I finished Task 1 and 2. Some problems appeared in task 3. I could not fix the problem in the 90 minutes.
+I finished task 1 and 2. Some problems appeared in task 3. I could not fix the problem in the 90 minutes.
